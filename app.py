@@ -18,7 +18,8 @@ def index():
 @app.route('/logs')
 def logs():
     LOGS = request.data
-    print(LOGS)
+    print(f"request.data = {request.data}")
+    print(f"request.values = {request.values}")
     logs = '''\
         83 <40>1 2012-11-30T06:45:29+00:00 host app web.3 - State changed from starting to up
         119 <40>1 2012-11-30T06:45:26+00:00 host app web.3 - Starting process with command `bundle exec rackup config.ru -p 24405`'''
