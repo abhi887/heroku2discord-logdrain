@@ -17,7 +17,7 @@ def index():
 
 @app.route('/logs')
 def logs():
-    LOGS = request.form.get("body")
+    LOGS = request.values
     print(LOGS)
     logs = '''\
         83 <40>1 2012-11-30T06:45:29+00:00 host app web.3 - State changed from starting to up
