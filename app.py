@@ -15,7 +15,7 @@ def index():
     return render_template("index.html")
 
 
-@app.route('/logs')
+@app.route('/logs',methods=["GET","POST"])
 def logs():
     LOGS = request.data
     print(f"request.data = {request.data}")
