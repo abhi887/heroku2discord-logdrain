@@ -23,8 +23,10 @@ def logs():
     #     83 <40>1 2012-11-30T06:45:29+00:00 host app web.3 - State changed from starting to up
     #     119 <40>1 2012-11-30T06:45:26+00:00 host app web.3 - Starting process with command `bundle exec rackup config.ru -p 24405`'''
     for i in LOGS.split('\n'):
-        pass
-        send_discord_message(re.split(">[a-zA-Z0-9]* ",i.strip())[1])
+        try:
+            send_discord_message(re.split(">[a-zA-Z0-9]* ",i.strip())[1])
+        except IndexError:
+            pass
     return jsonify({"status":"Logged !"})
 
 
