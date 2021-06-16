@@ -1,6 +1,9 @@
 # heroku2discord-logdrain
 An extremely simple heroku to discord-server https logdrain
 
+## Use as template
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
 ### Screenshot
 <img alt="Discord channel receiving heroku app logs" src="./images/logs.png"/>
 
