@@ -11,7 +11,7 @@
   ],
   "website": "https://github.com/abhi887/heroku2discord-logdrain",
   "repository": "https://github.com/abhi887/heroku2discord-logdrain",
-  "logo": "https://github.com/abhi887/heroku2discord-logdrain/tree/main/images/logo.png",
+  "logo": "https://github.com/abhi887/heroku2discord-logdrain/tree/main/images/icon.png",
   "success_url": "https://github.com/abhi887/heroku2discord-logdrain#5-adding-our-logdrain-to-herokus-logplex",
   "env": {
     "BOT_TOKEN": {
