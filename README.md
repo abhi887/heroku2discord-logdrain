@@ -4,6 +4,8 @@ An extremely simple heroku to discord-server https logdrain
 ### Screenshot
 <img alt="Discord channel receiving heroku app logs" src="./screenshots/logs.png"/>
 
+###### [modernlib](https://modernlib.herokuapp.com) is a cool library i made currently having more than 10,000 books, check it out [here](https://modernlib.herokuapp.com)
+
 ### Terms used 
 ##### Log source - 
 Log sources are any processes that might want to emit log entries relevant to your app. Some examples: your web dynos, the Heroku platform, the Heroku routing stack, and many add-ons.
