@@ -1,0 +1,30 @@
+{
+  "name": "heroku2discord-logdrain",
+  "description": "A small server to relay your heroku app logs to your Discord server, emulating heroku logs --tail on discord",
+  "keywords": [
+    "logging",
+    "logdrain",
+    "activity alerts",
+    "Discord",
+    "log relay",
+    "monitoring"
+  ],
+  "website": "https://github.com/abhi887/heroku2discord-logdrain",
+  "repository": "https://github.com/abhi887/heroku2discord-logdrain",
+  "logo": "https://github.com/abhi887/heroku2discord-logdrain/tree/main/images/logo.png",
+  "success_url": "https://github.com/abhi887/heroku2discord-logdrain#5-adding-our-logdrain-to-herokus-logplex",
+  "env": {
+    "BOT_TOKEN": {
+        "description": "Your Discord bot's secret token, see this https://github.com/abhi887/heroku2discord-logdrain#1-create-a-discord-bot-and-get-its-token"
+    },
+    "CHANNEL_ID":{
+        "description": "Channel id of the Discord channel where logs will be sent, see this https://github.com/abhi887/heroku2discord-logdrain#2-get-channel-id-to-send-logs-to"
+    }
+  },
+  "image": "heroku/python",
+  "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-python"
+    }
+  ]
+}
