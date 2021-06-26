@@ -1,5 +1,9 @@
 # heroku2discord-logdrain
-An extremely simple heroku to discord-server https logdrain
+An extremely simple heroku to discord https logdrain. 
+
+`heroku2discord-logdrain` streams the heroku app logs you see either on the heroku's website or on heroku's cli using 
+`heroku logs --tail` to any discord channel you specify with zero interaction requirement once setup.
+
 
 ## Instant deployment
 <div align="center">
