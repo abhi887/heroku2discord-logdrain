@@ -6,3 +6,30 @@ body{
 a{
     color:chartreuse;
 }
+
+hr{
+    margin-top:5%;
+    width:30%;
+    color:rgb(202, 196, 196);
+}
+
+code{
+    background-color: rgb(87, 87, 87);
+    color:white;
+    margin-top:5px;
+    padding:4px;
+    border:2px white;
+    border-style:inset;
+    border-radius: 0.3em;
+}
+
+.instructions{
+    line-height: 1.6em;
+    text-align: left;
+    background-color: rgba(128, 255, 0, 0.4) ;
+    margin-top:5%;
+    width:70%;
+    padding:3%;
+    border-radius: 0.3em;
+    box-shadow: 5px 5px 8px #c6c3c3;
+}

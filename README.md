@@ -7,7 +7,7 @@ An extremely simple heroku to discord https logdrain.
 
 ## Instant deployment
 <div align="center">
-<a href="https://heroku.com/deploy">
+<a href="https://heroku.com/deploy?template=https://github.com/abhi887/heroku2discord-logdrain">
   <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy">
 </a>
 </div>

@@ -5,14 +5,22 @@ from dotenv import load_dotenv
 from flask import Flask,render_template,request,jsonify
 
 load_dotenv()
+app = Flask(__name__)
+
 BOT_TOKEN = os.getenv("BOT_TOKEN")
 CHANNEL_ID = os.getenv("CHANNEL_ID")
 
-app = Flask(__name__)
+# Optional config var used for populating index.html at route '/'
+APP_URL = os.getenv("APP_URL")
+
+# change env var to false to skip sending a message divider after every log entry
+# or to mitigate logplex overflow in case of high traffic apps.
+MESSAGE_DIVIDER_ENABLED = os.getenv("MESSAGE_DIVIDER_ENABLED")
+MESSAGE_DIVIDER_ENABLED = True if(MESSAGE_DIVIDER_ENABLED != "false" ) else False
 
 @app.route('/')
 def index():
-    return render_template("index.html")
+    return render_template("index.html",APP_URL=APP_URL)
 
 
 @app.route('/logs',methods=["GET","POST"])
@@ -21,7 +29,8 @@ def logs():
     for i in LOGS.split('\n'):
         try:
             send_discord_message(re.split(">[a-zA-Z0-9]* ",i.strip())[1])
-            send_discord_message("------".center(30))
+            if(MESSAGE_DIVIDER_ENABLED):
+                send_discord_message("------")
         except IndexError:
             pass
     return jsonify({"status":"Logged !"})

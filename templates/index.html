@@ -1,16 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+{% with %}
+    {% if APP_URL is none or APP_URL is not defined %}
+        {% set APP_NAME = 'my cool app' %}
+        {% set APP_URL = '#' %}
+    {% else %}
+        {% set APP_NAME=APP_URL %}
+    {% endif %}
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/static/index.css">
-    <title>Modernlib - Logger</title>
+    <title>{{ APP_NAME }} - Logdrain</title>
 </head>
 <body>
     <center>
-        <h1><a href="https://modernlib.herokuapp.com">Modern's E-library's</a> logdrain server</h1>
-        <p>Nothing to see here, just a boring server for relaying <a href="https://modernlib.herokuapp.com">Modern's E-library's</a> logs to a private discord server.</p>
+        <h1><a href='{{ APP_URL }}'>{{ APP_NAME }}'s</a> logdrain server</h1>
+        <p>Nothing to see here, just a boring server for relaying <a href="{{ APP_URL }}">{{ APP_NAME }}'s</a> logs to a private discord server.</p>
+        <hr/>
+        <div class="instructions">
+            If you are the admin/webmaster of this page and still not receiving logs on discord, make sure you register your logdrain to heroku
+            <br/>
+            using heroku cli <code>heroku drains:add https://mylogdrain.com/logs -a myapp</code>
+            <br/>
+            and replace :
+            <ol>
+                <li>
+                    <code>https://mylogdrain.com/logs</code> with this same <code>url + /logs</code>
+                </li>
+                <li>
+                    <code>myapp</code> with the name of the app you want logs of.
+                </li>
+            </ol>
+            <p>
+                Refer to the <a href="https://github.com/abhi887/heroku2discord-logdrain" style="color:black;">documentation</a>
+            </p>
+        </div>
     </center>
 </body>
+{% endwith %}
 </html>
