@@ -20,6 +20,10 @@
     "CHANNEL_ID":{
         "description": "Channel id of the Discord channel where logs will be sent, see this https://github.com/abhi887/heroku2discord-logdrain#2-get-channel-id-to-send-logs-to"
     },
+    "LONG_LOGS_ENABLED":{
+        "description": "[Optional] [true/false] Enable long logs, which are sent in batches of chunks of 2000 characters. Useful for longer logs/stacktraces. Default is false",
+        "required":false
+    },
     "APP_URL":{
         "description": "[Optional] url of the app for which this logdrain is created, for populating links on index.html found at route '/'",
         "required":false
