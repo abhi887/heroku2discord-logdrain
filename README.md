@@ -15,7 +15,7 @@ An extremely simple heroku to discord https logdrain.
 ### Screenshot
 <img alt="Discord channel receiving heroku app logs" src="./images/logs.png"/>
 
-###### [modernlib](https://modernlib.herokuapp.com) is a cool library i made currently having more than 10,000 books, check it out [here](https://modernlib.herokuapp.com)
+###### [modernlib](https://modernlib.herokuapp.com) is a cool library i made currently having more than 20,000 books, check it out [here](https://modernlib.herokuapp.com)
 
 ### Terms used 
 ##### Log source - 
